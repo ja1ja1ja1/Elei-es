@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script>
+        window.onpopstate = function(event) {
+            // Faz algo quando o usuário clica no botão Voltar do navegador
+        history.back();
+        };
+        function goback(){
+            window.history.back()
+        }
+    </script>
+    <title>MEUS DADOS</title>
+</head>
+<body id="body-cad">
+    <div id="cab">
+        <!--<button id="bt-back"><img src="img/back.png" alt="" width="50px" height="50px" onclick="goback()"></button>-->
+        <h1>Justiça Eleitoral</h1>
+    </div>
+    
+        <table >
+            <div id="corpo-cad">
+                <?php if($adm == "Sim"){echo "<img src='img/adm.png' alt='adm' title='adm' width='50px' height='50px'>";}?>
+                
+                <h2 style="color:#fff;margin-left:80px">MEUS DADOS</h2>
+                <label id="lab-cad"><b>Nome</b></label>
+                <div class="inp-dados"><b>
+                    <?php
+                        if(isset($nome)){
+                            echo $nome;
+                        }
+                    ?></b>
+                </div>               
+                <label id="lab-cad"><b>CPF</b></label>
+                <div class="inp-dados"><b>
+                <?php
+                        if(isset($cpf)){
+                            echo $cpf;
+                        }
+                    ?></b>
+                </div>
+                <label id="lab-cad"><b>Voto Vereador</b></label>
+                <div class="inp-dados"><b>
+                <?php
+                        if(isset($vt1)){
+                            echo $Vereador;
+                        }
+                    ?></b>
+                </div>
+                <label id="lab-cad"><b>Voto Prefeito</b></label>
+                <div class="inp-dados"><b>
+                <?php
+                        if(isset($vt2)){
+                            echo $Prefeito;
+                        }
+                    ?></b>
+                </div>
+                <label id="lab-cad"><b>Código de eleitor</b>
+                <div class="inp-dados"><b>
+                <?php
+                        if(isset($Codigo)){
+                            echo $Codigo;
+                        }
+                    ?></b>
+                </div>
+            </div>
+        
+    <div id="rod">
+        <!--rodapé-->
+    </div> 
+</body>
+</html>

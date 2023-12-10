@@ -1,12 +1,22 @@
+label{
+    display: block;
+}
 input,
 select{
     outline: none;
-
+}
+.right{
+    display: flex;
+    justify-content: right;
 }
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
 }
 .controller{
     display: flex;
@@ -68,30 +78,41 @@ select{
     background-size: cover;
 }
 #corpo-cad{
-    backdrop-filter: blur(5px);
     display: block;
-    border-radius: 10px;
+    width: 300px;
     padding: 20px;
+    margin-top: 7rem;
+    background-color: #fff;
+    border: 1px solid #333;
+}
+#corpo-cad div {
+    margin-top: 1.5rem;
 }
 #corpo-cad .controller{
     justify-content: space-between;
 }
-
-#lab-cad{
-    color: #fff;
-    font-size: x-large;
-    margin-right: 20px;
-    margin-bottom: 10px;
+#corpo-cad h2{
+    text-align: center;
+}
+#corpo-cad label{
+    padding: 0 5px;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#corpo-cad input[type='text']{
+    border: none;
+    width: 100%;
+    padding: 2px 5px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #c5c5c5;
 }
 .bt-cad{
     margin-top: 20px;
-    margin-left: 1px;
     width: 316px;
     height: 30px;
     font-size: x-large;
     border: none;
-    border-radius: 10px;
-    background-color: #fff;
     color: black;
     cursor: pointer;
 }
@@ -129,16 +150,15 @@ select{
     /*left: 33%;*/
 }
 .bt-log{
-    margin-top: 20px;
-    width: 81px;
-    height: 30px;
+    padding: 10px 5px;
     font-size: 15px;
-    font-weight: bolder;
-    border: none;
-    border-radius: 10px;
     background-color: #fff;
+    border: none;
     color: black;
     cursor: pointer;
+}
+.btCadastrar{
+    font-size: small;
 }
 .inp-log{
     width: 270px;
